@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loacl storage </title>
+
+    
+</head>
+<body>
+    <table>
+            <tr><td>Enter your name:</td> <td><input type="text" id="t1" required /></td></tr>
+            <tr><td>Enter your address:</td> <td><input type="text" id="t2" required /></td></tr>
+            <tr><td>Enter your phone number:</td> <td><input type="number" id="t3" required /></td></tr>
+            <tr><td>Enter your email:</td> <td><input type="email" id="t4" required /></td></tr>
+            <tr><td><td><input type="submit" onclick=showdata()></tr>
+        
+    </table>
+
+    <script>
+        function adddata(){
+            localStorage.setItem("name",document.getElementById("t1").value);
+            localStorage.setItem("address",document.getElementById("t2").value);
+            localStorage.setItem("phone",document.getElementById("t3").value);
+            localStorage.setItem("email",document.getElementById("t4").value);
+            document.write("data will be displayed in the next page");
+        }
+        function showdata(){
+            let c = localStorage.name;
+            alert(c);
+        }
+        function removedata(){
+            localStorage.removeItem("name");
+            document.write("name is deleted");
+        }
+    </script>
+</body>
+</html>

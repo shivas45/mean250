@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <fieldset> 
+    <legend>this</legend>
+    <form action="" name="f1">
+        <p>Name
+        <input type="text" name="name"/>
+    </p>
+
+        <p>Age
+        <input type="number" name="age"/>
+    </p>
+
+        <p>Email
+        <input type="email" name="email"/>
+    </p>
+    <p>Aadhar
+        <input type="number" name="aadhar"/>
+    </p>
+
+        <input type="submit" name="submit" onclick ="validateform()"/>
+    </form>
+</fieldset>
+
+<script>
+    function validateform(){
+        const name = document.forms["f1"]["name"].value;
+        const age = document.forms["f1"]["age"].value;
+        const email = document.forms["f1"]["email"].value;
+        const aadhar = document.forms["f1"]["aadhar"].value;
+
+        if(name ===""){
+            alert("Name should not empty");
+
+        }
+        if(age.length > 5){
+            alert("age should be graeater than 5");
+        }
+        if(email ===""){
+            alert("email shuold not be empty");
+        }
+        if(aadhar.length != 12){
+            alert("aadhar should be of 12 number")
+        }
+
+    }
+</script>
+
+</body>
+</html>
